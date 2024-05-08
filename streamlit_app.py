@@ -1,0 +1,12 @@
+import streamlit as st
+import numpy as np
+import pandas as pd
+
+map_data = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+
+st.map(map_data)
+st.write("# what's going on")
+for i in range(0,10):
+    st.write("- " + str(i))
